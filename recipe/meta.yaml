@@ -1,5 +1,5 @@
 {% set name = "ipynbname" %}
-{% set version = "2021.3.2" %}
+{% set version = "2023.1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cf7bae999005dce012738d09610e69a47acd765797c0365c803f96c21ea2f32b
+  sha256: 90bccb6d8a42c4fcd85dbc877de974760040d44084070dedb458644c6faa5e11
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -24,14 +24,14 @@ requirements:
 
 test:
   imports:
-    - ipynbname 
+    - ipynbname
 
 about:
   home: https://github.com/msm1089/ipynbname
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Simple utility that retrieves current Jupyter notebook filename or path, when run from Jupyter notebook'
+  summary: Simple utility that retrieves current Jupyter notebook filename or path, when run from Jupyter notebook
   dev_url: https://github.com/msm1089/ipynbname
 
 extra:
