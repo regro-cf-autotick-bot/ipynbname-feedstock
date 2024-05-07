@@ -1,5 +1,5 @@
 {% set name = "ipynbname" %}
-{% set version = "2023.2.0.0" %}
+{% set version = "2024.1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 462bbdd7956624876dc4ea81fa792845ab3870e444ca1f6b7acdaea37d8c9ebf
+  sha256: 1d3c69cdee8a97814f456a7204e9cc195b4bbb4b9e45cbe757796b162493f606
 
 build:
   noarch: python
